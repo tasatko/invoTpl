@@ -34,14 +34,9 @@ class Elements extends Phalcon\Mvc\User\Component
         ),
         'Quotes' => array(
             'controller' => 'quotes',
-            'action' => 'index',
+            'action' => 'search',
             'any' => true
         ),
-        'Your Profile' => array(
-            'controller' => 'invoices',
-            'action' => 'profile',
-            'any' => false
-        )
     );
 
     /**
@@ -59,7 +54,7 @@ class Elements extends Phalcon\Mvc\User\Component
                 'action' => 'end'
             );
         } else {
-            unset($this->_headerMenu['pull-left']['invoices']);
+            unset($this->_headerMenu['pull-left']['facts']);
         }
 
         echo '<div class="nav-collapse">';

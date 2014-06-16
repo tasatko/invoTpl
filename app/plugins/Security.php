@@ -40,6 +40,7 @@ class Security extends Plugin
 			$privateResources = array(
                 'session' => array('register'),
                 'facts' => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
+                'quotes' => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
 			);
 			foreach ($privateResources as $resource => $actions) {
 				$acl->addResource(new Phalcon\Acl\Resource($resource), $actions);

@@ -51,6 +51,7 @@ class FactsController extends ControllerBase
 	{
 		$this->session->conditions = null;
 		$this->view->form = $this->getForm();
+        return $this->forward("facts/search");
 	}
 
 	public function searchAction()

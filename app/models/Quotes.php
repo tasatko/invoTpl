@@ -2,7 +2,7 @@
 
 use JsonSchema\Constraints\Enum;
 
-class Facts extends Phalcon\Mvc\Model
+class Quotes extends Phalcon\Mvc\Model
 {
     public $id;
 
@@ -11,4 +11,6 @@ class Facts extends Phalcon\Mvc\Model
     public $lang;
 
     public $text;
+
+    public $author;
 }
