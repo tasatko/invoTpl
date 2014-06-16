@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `companies`
+-- Table structure for table `facts`
 --
 
-DROP TABLE IF EXISTS `companies`;
+DROP TABLE IF EXISTS `facts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `companies` (
+CREATE TABLE `facts` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(70) COLLATE utf8_spanish_ci NOT NULL,
   `telephone` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
@@ -33,13 +33,13 @@ CREATE TABLE `companies` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `companies`
+-- Dumping data for table `facts`
 --
 
-LOCK TABLES `companies` WRITE;
-/*!40000 ALTER TABLE `companies` DISABLE KEYS */;
-INSERT INTO `companies` VALUES (1,'Acme','31566564','Address','Hello'),(2,'Acme Inc','+44 564612345','Guildhall, PO Box 270, London','London');
-/*!40000 ALTER TABLE `companies` ENABLE KEYS */;
+LOCK TABLES `facts` WRITE;
+/*!40000 ALTER TABLE `facts` DISABLE KEYS */;
+INSERT INTO `facts` VALUES (1,'Acme','31566564','Address','Hello'),(2,'Acme Inc','+44 564612345','Guildhall, PO Box 270, London','London');
+/*!40000 ALTER TABLE `facts` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

@@ -36,13 +36,11 @@
 
             <p>Create an account offers the following advantages:</p>
             <ul>
-                <li>Create, track and export your invoices online</li>
-                <li>Gain critical insights into how your business is doing</li>
-                <li>Stay informed about promotions and special packages</li>
+                <li>Create, edit and export your facts/quotes online</li>
             </ul>
 
             <div class="clearfix center">
-                {{ link_to('session/register', 'Sign Up', 'class': 'btn btn-primary btn-large btn-success') }}
+                {{ link_to('contact/index', 'Ask administrator', 'class': 'btn btn-primary btn-large btn-success') }}
             </div>
         </div>
 

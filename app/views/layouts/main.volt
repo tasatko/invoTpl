@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="#">INVO</a>
+            <a class="brand" href="#">Backend</a>
             {{ elements.getMenu() }}
         </div>
     </div>
@@ -16,6 +16,6 @@
     {{ content() }}
     <hr>
     <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; Adlesse 2014</p>
     </footer>
 </div>

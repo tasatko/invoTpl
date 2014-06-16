@@ -5,7 +5,7 @@ class ControllerBase extends Phalcon\Mvc\Controller
 
     protected function initialize()
     {
-        Phalcon\Tag::prependTitle('INVO | ');
+        Phalcon\Tag::prependTitle('backend | ');
     }
 
     protected function forward($uri){

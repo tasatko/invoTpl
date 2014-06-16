@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Elements
- *
- * Helps to build UI elements for the application
- */
 class Elements extends Phalcon\Mvc\User\Component
 {
 
@@ -14,13 +9,9 @@ class Elements extends Phalcon\Mvc\User\Component
                 'caption' => 'Home',
                 'action' => 'index'
             ),
-            'invoices' => array(
-                'caption' => 'Invoices',
-                'action' => 'index'
-            ),
-            'about' => array(
-                'caption' => 'About',
-                'action' => 'index'
+            'facts' => array(
+                'caption' => 'Widgets',
+                'action' => 'search'
             ),
             'contact' => array(
                 'caption' => 'Contact',
@@ -36,23 +27,13 @@ class Elements extends Phalcon\Mvc\User\Component
     );
 
     private $_tabs = array(
-        'Invoices' => array(
-            'controller' => 'invoices',
-            'action' => 'index',
+        'Facts' => array(
+            'controller' => 'facts',
+            'action' => 'search',
             'any' => false
         ),
-        'Companies' => array(
-            'controller' => 'companies',
-            'action' => 'index',
-            'any' => true
-        ),
-        'Products' => array(
-            'controller' => 'products',
-            'action' => 'index',
-            'any' => true
-        ),
-        'Product Types' => array(
-            'controller' => 'producttypes',
+        'Quotes' => array(
+            'controller' => 'quotes',
             'action' => 'index',
             'any' => true
         ),

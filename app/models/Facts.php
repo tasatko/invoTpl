@@ -1,6 +1,8 @@
 <?php
 
-class Companies extends Phalcon\Mvc\Model
+use JsonSchema\Constraints\Enum;
+
+class Facts extends Phalcon\Mvc\Model
 {
     /**
      * @var integer
@@ -10,21 +12,15 @@ class Companies extends Phalcon\Mvc\Model
     /**
      * @var string
      */
-    public $name;
+    public $url;
 
     /**
      * @var string
      */
-    public $telephone;
+    public $lang;
 
     /**
      * @var string
      */
-    public $address;
-
-    /**
-     * @var string
-     */
-    public $city;
-
+    public $text;
 }

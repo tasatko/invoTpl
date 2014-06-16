@@ -20,6 +20,7 @@ class Security extends Plugin
 
 	public function getAcl()
 	{
+        $this->persistent->destroy();
 		if (!isset($this->persistent->acl)) {
 
 			$acl = new Phalcon\Acl\Adapter\Memory();
@@ -37,10 +38,8 @@ class Security extends Plugin
 
 			//Private area resources
 			$privateResources = array(
-				'companies' => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
-				'products' => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
-				'producttypes' => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
-				'invoices' => array('index', 'profile')
+                'session' => array('register'),
+                'facts' => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
 			);
 			foreach ($privateResources as $resource => $actions) {
 				$acl->addResource(new Phalcon\Acl\Resource($resource), $actions);
@@ -49,9 +48,8 @@ class Security extends Plugin
 			//Public area resources
 			$publicResources = array(
 				'index' => array('index'),
-				'about' => array('index'),
-				'session' => array('index', 'register', 'start', 'end'),
-				'contact' => array('index', 'send')
+				'contact' => array('index', 'send'),
+                'session' => array('index', 'start', 'end'),
 			);
 			foreach ($publicResources as $resource => $actions) {
 				$acl->addResource(new Phalcon\Acl\Resource($resource), $actions);
@@ -60,7 +58,9 @@ class Security extends Plugin
 			//Grant access to public areas to both users and guests
 			foreach ($roles as $role) {
 				foreach ($publicResources as $resource => $actions) {
-					$acl->allow($role->getName(), $resource, '*');
+                    foreach ($actions as $action){
+					    $acl->allow($role->getName(), $resource, $action);
+                    }
 				}
 			}
 
